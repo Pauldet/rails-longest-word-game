@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Result</h1>
+  <% if @score == 1 %>
+    <p><%="Sorry but #{params["attempt"]} can't be built out of #{params["letters"]}"%></p>
+  <% elsif @score == 2 %>
+    <p><%="Sorry but #{params["attempt"]} does not seem to be a valid English word..."%></p>
+  <% elsif @score == 3 %>
+    <p><%="Congratulations #{params["attempt"]} is a valid English word!"%></p>
+  <% end %>
+<%= link_to 'Play again', new_path %>
+</div>
